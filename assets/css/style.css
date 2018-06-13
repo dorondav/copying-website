@@ -270,6 +270,7 @@
     position: relative;
     grid-template-columns: repeat(8, 1fr);
     grid-auto-rows: minmax(100px, auto);
+    overflow-y: hidden;
 }
 
 .mainHeader {
@@ -279,5 +280,107 @@
     height: 100px;
     text-align: center;
     grid-column: 1/9;
-    margin-top: 5%;
+    margin-top: 10%;
+}
+
+/* ************Cog Wheells Css ***********/
+
+.cogwheel {
+    background-color: transparent;
+    height: 150px;
+    width: 150px;
+    overflow-y: hidden;
+}
+
+.cogwheel img {
+    background-color: transparent;
+}
+
+#cogwheel1 {
+    height: 220px;
+    width: 220px;
+    margin-left: 47%;
+}
+
+#cogwheel2 {
+    height: 150px;
+    width: 150px;
+    margin-left: 41%;
+    margin-top: -3.6%;
+}
+
+#cogwheel3 {
+    height: 220px;
+    width: 220px;
+    margin-left: 52.5%;
+    margin-top: -7.4%;
+}
+
+#cogwheel4 {
+    height: 270px;
+    width: 270px;
+    margin-left: 42.3%;
+    margin-top: -3%;
+}
+
+#cogwheel5 {
+    height: 220px;
+    width: 220px;
+    margin-left: 46.5%;
+    margin-top: -0.5%;
+}
+
+.wheelNumCover {
+    background-color: transparent;
+    height: 150px;
+    width: 150px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Arimo', sans-serif;
+    overflow: hidden;
+}
+
+#cogNum1 {
+    background-color: transparent;
+    font-size: 140px;
+    height: 220px;
+    width: 220px;
+    margin-left: 52%;
+    margin-top: -56.5%;
+}
+
+#cogNum2 {
+    background-color: transparent;
+    height: 150px;
+    width: 150px;
+    margin-left: 44.5%;
+    margin-top: -3.2%;
+    font-size: 90px;
+}
+
+#cogNum3 {
+    background-color: transparent;
+    height: 220px;
+    width: 220px;
+    margin-left: 57%;
+    margin-top: -7.4%;
+    font-size: 140px;
+}
+
+#cogNum4 {
+    background-color: transparent;
+    height: 270px;
+    width: 270px;
+    margin-left: 48%;
+    margin-top: -3%;
+    font-size: 160px;
+}
+
+#cogNum5 {
+    background-color: transparent;
+    height: 220px;
+    width: 220px;
+    margin-left: 51%;
+    margin-top: -0.5%;
+    font-size: 140px;
 }
