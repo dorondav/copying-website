@@ -1,0 +1,283 @@
+* {
+    background: gray;
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+    font-family: 'Arimo', sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.topScreen {
+    background-image: url('../images/team-planning-for-new.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    height: 600px;
+    grid-column: 1/9;
+    grid-row: 1/5;
+}
+
+.cover {
+    background-color: rgba(0, 0, 0, 0.5);
+    max-width: 100%;
+    height: 600px;
+    grid-column: 1/9;
+    grid-row: 1/5;
+    overflow-y: hidden;
+}
+
+.cover img {
+    width: 150px;
+    height: 65px;
+    float: right;
+    top: 0;
+    right: 0;
+    margin-right: 5%
+}
+
+.cover .headLine {
+    width: 100%;
+    height: 280px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    z-index: 8;
+    font-size: 82px;
+    background-color: transparent;
+    text-align: start;
+    padding-right: 5%;
+    position: relative;
+    margin-top: -2%;
+    font-family: 'Arimo', sans-serif;
+    overflow-y: hidden;
+}
+
+.cover .parag {
+    color: rgb(255, 255, 255);
+    z-index: 8;
+    background-color: transparent;
+    text-align: justify;
+    text-justify: inter-word;
+    padding-right: 5%;
+    font-family: 'Arimo', sans-serif;
+}
+
+.productOps {
+    width: 110%;
+    position: relative;
+    transform: rotate(2deg);
+    right: 3%;
+    background-color: rgb(247, 143, 29);
+    height: 400px;
+    grid-column: 1/9;
+    grid-row: 6;
+    z-index: 110;
+}
+
+.productOps {
+    display: flex;
+}
+
+.attri {
+    height: 120px;
+    width: 160px;
+    z-index: 100;
+    background-color: rgb(247, 143, 29);
+    margin-left: 25%;
+}
+
+.attriDiv {
+    background-color: rgb(247, 143, 29);
+    width: 33.3%;
+    transform: rotate(-2deg);
+    height: 70%;
+    position: relative;
+    overflow: hidden;
+    margin-top: 2%;
+    border-left: 2px solid rgb(255, 255, 255);
+    padding-left: 2%;
+    font-family: 'Arimo', sans-serif;
+}
+
+.attriP {
+    background-color: transparent;
+    width: 90%;
+    height: 70%;
+    margin-top: -8%;
+    position: relative;
+    overflow: hidden;
+    text-align: justify;
+    text-justify: inter-word;
+    font-family: 'Arimo', sans-serif;
+}
+
+@media all and (max-width: 970px) {
+    .attriP {
+        margin-top: -10%;
+        height: 100%;
+        overflow: visible;
+    }
+}
+
+.attriHeader {
+    width: 90%;
+    height: 40%;
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(247, 143, 29);
+    text-align: center;
+    color: rgb(255, 255, 255);
+    letter-spacing: 0.5px;
+}
+
+.myNavbar {
+    opacity: 0.8;
+    z-index: 136;
+    width: 100%;
+    grid-column: 1/9;
+    margin-top: 4%;
+    display: flex;
+    height: 40%;
+    letter-spacing: 0.5px;
+    overflow-y: hidden;
+    position: relative;
+}
+
+.myNavbar .myNavbarUl {
+    width: 100%;
+    display: flex;
+}
+
+.myNavbarUl li {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    overflow-y: hidden;
+    text-align: justify;
+    text-justify: inter-word;
+    padding-right: 2%;
+    letter-spacing: 0.3px;
+}
+
+@media all and (max-width: 935px) {
+    .myNavbar {
+        margin-top: 7%;
+        height: 50px;
+    }
+    .myNavbarUl li {
+        text-align: center;
+        padding-top: 10px
+    }
+    .myNavbarUl li.linkToPage:nth-child(3),
+    .myNavbarUl li.linkToPage:nth-child(5),
+    .myNavbarUl li.linkToPage:nth-child(6) {
+        padding-top: 0px;
+    }
+}
+
+.myNavbar li:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media all and (max-width: 970px) {
+    .myNavbarUl li.linkToPage:not(:first-child):before {
+        display: none;
+    }
+}
+
+.myNavbarUl li.linkToPage:not(:first-child):before {
+    content: " | ";
+    padding-left: 23%;
+}
+
+.aboutUs {
+    grid-column: 1/9;
+    grid-row: 8/14;
+    height: 700px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    z-index: 100;
+    overflow-y: hidden;
+}
+
+.aboutUsHead {
+    height: 100px;
+    grid-column: 4/5;
+    overflow: hidden;
+    background-color: rgb(247, 143, 29);
+    background-color: transparent;
+    margin-top: 15%;
+    font-family: 'Arimo', sans-serif;
+}
+
+@media all and (max-width: 900px) {
+    .aboutUsHead {
+        margin-top: 30%;
+    }
+}
+
+.aboutUsHead h3 {
+    background-color: transparent;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Arimo', sans-serif;
+    letter-spacing: 0.8px;
+}
+
+.acoutUsCover p {
+    background-color: transparent;
+    text-align: justify;
+    text-justify: inter-word;
+    font-weight: bold;
+    font-family: 'Arimo', sans-serif;
+    z-index: 300;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    letter-spacing: 0.5px;
+    ;
+}
+
+.aboutUsImg {
+    width: 100%;
+    height: 100%;
+    grid-column: 1/9;
+    grid-row: 1/9;
+}
+
+.acoutUsCover {
+    height: 100%;
+    grid-column: 1/9;
+    grid-row: 1/9;
+    width: 100%;
+    z-index: 100;
+    overflow-y: hidden;
+    background-color: hsla(0, 0%, 100%, 0.8);
+}
+
+.mainPage {
+    grid-column: 1/9;
+    grid-row: 15/28;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.mainHeader {
+    background-color: transparent;
+    color: rgb(247, 143, 29);
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    grid-column: 1/9;
+    margin-top: 5%;
+}
