@@ -1,11 +1,14 @@
-* {
+html {
     background: #8a8a8a;
-    height: 100%;
+}
+
+body {
     width: 100%;
     padding: 0px;
-    margin: 0px;
+    margin: auto;
     overflow-x: hidden;
-    font-family: 'Arimo', sans-serif;
+    font-family: "Arimo", sans-serif;
+    height: 100%;
 }
 
 .grid-container {
@@ -20,7 +23,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     max-width: 100%;
-    height: 600px;
+    height: 120%;
     grid-column: 1/9;
     grid-row: 1/5;
 }
@@ -28,35 +31,30 @@
 .cover {
     background-color: rgba(0, 0, 0, 0.5);
     max-width: 100%;
-    height: 600px;
+    height: 120%;
     grid-column: 1/9;
     grid-row: 1/5;
     overflow-y: hidden;
 }
 
 .cover img {
-    width: 150px;
-    height: 65px;
+    width: 10%;
+    height: 12%;
     float: right;
-    top: 0;
-    right: 0;
     margin-right: 5%
 }
 
-.cover .headLine {
+.cover h1 {
     width: 100%;
-    height: 280px;
+    height: 60%;
     color: rgb(255, 255, 255);
     font-weight: bold;
     z-index: 8;
-    font-size: 82px;
-    background-color: transparent;
+    font-size: 450%;
     text-align: start;
     padding-right: 5%;
     position: relative;
-    margin-top: -2%;
-    font-family: 'Arimo', sans-serif;
-    overflow-y: hidden;
+    margin-top: 4%;
 }
 
 .cover .parag {
@@ -66,7 +64,7 @@
     text-align: justify;
     text-justify: inter-word;
     padding-right: 5%;
-    font-family: 'Arimo', sans-serif;
+    font-size: 150%;
 }
 
 .productOps {
@@ -75,10 +73,11 @@
     transform: rotate(2deg);
     right: 3%;
     background-color: rgb(247, 143, 29);
-    height: 400px;
+    height: 200%;
     grid-column: 1/9;
     grid-row: 6;
     z-index: 110;
+    margin-top: -3%;
 }
 
 .productOps {
@@ -86,8 +85,8 @@
 }
 
 .attri {
-    height: 120px;
-    width: 160px;
+    height: 45%;
+    width: 28%;
     z-index: 100;
     background-color: rgb(247, 143, 29);
     margin-left: 25%;
@@ -95,7 +94,7 @@
 
 .attriDiv {
     background-color: rgb(247, 143, 29);
-    width: 33.3%;
+    width: 30%;
     transform: rotate(-2deg);
     height: 70%;
     position: relative;
@@ -103,19 +102,17 @@
     margin-top: 2%;
     border-left: 2px solid rgb(255, 255, 255);
     padding-left: 2%;
+    margin-top: 3%;
     font-family: 'Arimo', sans-serif;
 }
 
 .attriP {
-    background-color: transparent;
     width: 90%;
     height: 70%;
     margin-top: -8%;
     position: relative;
-    overflow: hidden;
     text-align: justify;
-    text-justify: inter-word;
-    font-family: 'Arimo', sans-serif;
+    background-color: rgb(247, 143, 29);
 }
 
 @media all and (max-width: 970px) {
@@ -137,53 +134,32 @@
     letter-spacing: 0.5px;
 }
 
-.myNavbar {
+nav {
+    position: sticky;
+    top: 0;
     opacity: 0.8;
-    z-index: 136;
-    width: 100%;
+    z-index: 1000;
+    width: 105%;
+    margin-left: -2%;
     grid-column: 1/9;
-    margin-top: 4%;
     display: flex;
-    height: 40%;
-    letter-spacing: 0.5px;
-    overflow-y: hidden;
-    position: relative;
+    height: 50%;
 }
 
-.myNavbar .myNavbarUl {
+nav ul {
     width: 100%;
     display: flex;
+    height: 100%;
 }
 
-.myNavbarUl li {
+nav ul li {
+    padding-top: 1%;
     background-color: rgb(255, 255, 255);
     width: 100%;
     overflow-y: hidden;
     text-align: justify;
-    text-justify: inter-word;
     padding-right: 2%;
     letter-spacing: 0.3px;
-}
-
-@media all and (max-width: 935px) {
-    .myNavbar {
-        margin-top: 7%;
-        height: 50px;
-    }
-    .myNavbarUl li {
-        text-align: center;
-        padding-top: 10px
-    }
-    .myNavbarUl li.linkToPage:nth-child(3),
-    .myNavbarUl li.linkToPage:nth-child(5),
-    .myNavbarUl li.linkToPage:nth-child(6) {
-        padding-top: 0px;
-    }
-}
-
-.myNavbar li:hover {
-    text-decoration: none;
-    cursor: pointer;
 }
 
 @media all and (max-width: 970px) {
@@ -192,20 +168,19 @@
     }
 }
 
-.myNavbarUl li.linkToPage:not(:first-child):before {
+nav ul li.linkToPage:not(:first-child):before {
     content: " | ";
     padding-left: 23%;
 }
 
 .aboutUs {
     grid-column: 1/9;
-    grid-row: 8/14;
-    height: 700px;
+    grid-row: 7/9;
+    height: 100%;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-auto-rows: minmax(100px, auto);
     z-index: 100;
-    overflow-y: hidden;
 }
 
 .aboutUsHead {
@@ -215,7 +190,7 @@
     color: rgb(247, 143, 29);
     background-color: transparent;
     margin-top: 15%;
-    font-family: 'Arimo', sans-serif;
+    font-family: "Arimo", sans-serif;
 }
 
 @media all and (max-width: 900px) {
@@ -224,12 +199,11 @@
     }
 }
 
-.aboutUsHead h3 {
+.aboutUsHead h4 {
     background-color: transparent;
     text-align: center;
-    font-size: 20px;
     font-weight: bold;
-    font-family: 'Arimo', sans-serif;
+    font-family: "Arimo", sans-serif;
     letter-spacing: 0.8px;
 }
 
@@ -238,13 +212,12 @@
     text-align: justify;
     text-justify: inter-word;
     font-weight: bold;
-    font-family: 'Arimo', sans-serif;
+    font-family: "Arimo", sans-serif;
     z-index: 300;
     width: 50%;
     margin-left: 25%;
     margin-right: 25%;
     letter-spacing: 0.5px;
-    ;
 }
 
 .aboutUsImg {
@@ -264,14 +237,15 @@
     background-color: rgba(255, 255, 255, 0.8);
 }
 
+/* ************Cog Wheells Css ***********/
+
 .mainPage {
     grid-column: 1/9;
-    grid-row: 15/30;
+    grid-row: 9/25;
     background-color: rgb(255, 255, 255);
     position: relative;
     grid-template-columns: repeat(8, 1fr);
     grid-auto-rows: minmax(100px, auto);
-    overflow-y: hidden;
 }
 
 .mainHeader {
@@ -281,346 +255,151 @@
     height: 100px;
     text-align: center;
     grid-column: 1/9;
-    margin-top: 10%;
-}
-
-/* ************Cog Wheells Css ***********/
-
-.cogwheel {
-    background-color: transparent;
-    height: 150px;
-    width: 150px;
-    overflow-y: hidden;
-}
-
-.cogwheel img {
-    background-color: transparent;
 }
 
 #cogwheel1 {
-    height: 220px;
-    width: 220px;
-    margin-left: 47%;
+    margin-left: 40%;
+    z-index: 500;
 }
 
-#cogwheel2 {
-    height: 150px;
-    width: 150px;
-    margin-left: 41%;
-    margin-top: -3.6%;
-}
-
-#cogwheel3 {
-    height: 220px;
-    width: 220px;
-    margin-left: 52.5%;
-    margin-top: -7.4%;
-}
-
-#cogwheel4 {
-    height: 270px;
-    width: 270px;
-    margin-left: 42.3%;
-    margin-top: -3%;
-}
-
-#cogwheel5 {
-    height: 220px;
-    width: 220px;
-    margin-left: 46.5%;
-    margin-top: -0.5%;
-}
-
-.wheelNumCover {
-    background-color: transparent;
-    height: 150px;
-    width: 150px;
-    color: white;
-    font-weight: bold;
-    font-family: 'Arimo', sans-serif;
-    overflow: hidden;
-}
-
-#cogNum1 {
-    background-color: transparent;
-    font-size: 140px;
-    height: 220px;
-    width: 220px;
-    margin-left: 52%;
-    margin-top: -56.5%;
-}
-
-#cogNum2 {
-    background-color: transparent;
-    height: 150px;
-    width: 150px;
-    margin-left: 44.5%;
-    margin-top: -3.2%;
-    font-size: 90px;
-}
-
-#cogNum3 {
-    background-color: transparent;
-    height: 220px;
-    width: 220px;
-    margin-left: 57%;
-    margin-top: -7.4%;
-    font-size: 140px;
-}
-
-#cogNum4 {
-    background-color: transparent;
-    height: 270px;
-    width: 270px;
-    margin-left: 48%;
-    margin-top: -3%;
-    font-size: 160px;
-}
-
-#cogNum5 {
-    background-color: transparent;
-    height: 220px;
-    width: 220px;
-    margin-left: 51%;
-    margin-top: -0.5%;
-    font-size: 140px;
-}
-
-@media all and (max-width: 970px) {
-    #cogwheel1 {
-        margin-left: 43%;
-    }
-    #cogwheel2 {
-        margin-left: 27%;
-        margin-top: -11%;
-    }
-    #cogwheel3 {
-        margin-left: 48%;
-        margin-top: -10%;
-    }
-    #cogwheel4 {
-        margin-left: 22%;
-        margin-top: -12%;
-    }
-    #cogwheel5 {
-        margin-left: 36%;
-        margin-top: -3%;
-    }
-    #cogNum1 {
-        margin-top: -108%;
-    }
-    #cogNum2 {
-        margin-left: 33.5%;
-        margin-top: -11.5%;
-    }
-    #cogNum3 {
-        margin-left: 58%;
-        margin-top: -9.5%;
-    }
-    #cogNum4 {
-        margin-left: 32%;
-        margin-top: -12%;
-    }
-    #cogNum5 {
-        margin-left: 45%;
-        margin-top: -3%;
-        font-size: 140px;
-    }
-}
-
-/* Wheels Text CSS */
-
-.wheelText {
-    background-color: transparent;
-    width: 500px;
-    height: 500px;
-    overflow: hidden;
-}
-
-.wheelText p {
-    background-color: transparent;
-    text-align: end;
-}
-
-.wheelText h4 {
-    background-color: transparent;
-    text-align: end;
-}
-
-/*    start 1 */
-
-.line1 {
-    background: url("../images/line1.png");
-    background-repeat: no-repeat;
-    background-size: auto;
-    margin-left: -17%;
-    margin-top: -33%;
-}
-
-#cogText1 {
-    margin-left: 61.5%;
-    margin-top: -58%;
-}
-
-#cogText1 p {
-    overflow: hidden;
-    width: 200px;
-    height: 200px;
-    margin-top: -35%;
-}
-
-#cogText1 h4 {
-    width: 200px;
-    height: 200px;
+#cogwheel1 h4 {
     color: #9e069c;
 }
 
-/*    start 2 */
-
-.line2 {
-    background: url("../images/line2.png");
-    background-repeat: no-repeat;
-    background-size: auto;
+#cogwheel1 #cogText1 {
+    margin-left: 34.5%;
     margin-top: -33%;
+    height: 50%;
+    width: 25%;
+    text-align: end;
 }
 
-#cogText2 {
-    margin-left: 27%;
-    margin-top: -25%;
-}
-
-#cogText2 p {
-    overflow: hidden;
-    width: 200px;
-    height: 200px;
-    margin-top: -35%;
-}
-
-#cogText2 h4 {
-    width: 200px;
-    height: 200px;
-    color: #7d7d7d;
-    overflow: hidden;
-}
-
-/*    start 3 */
-
-.line3 {
-    background: url("../images/line3.png");
-    background-repeat: no-repeat;
-    background-size: auto;
-    margin-left: -27%;
-    margin-top: -33%;
-}
-
-#cogText3 {
-    margin-left: 66%;
-    margin-top: -27%;
-}
-
-#cogText3 p {
-    overflow: hidden;
-    width: 200px;
-    height: 200px;
-    margin-top: -35%;
-    overflow-y: hidden;
-}
-
-#cogText3 h4 {
-    width: 200px;
-    height: 200px;
-    color: #41b3dd;
-    overflow: hidden;
-    overflow-y: hidden;
-}
-
-/*    start 4*/
-
-.line4 {
-    background: url("../images/line4.png");
-    background-repeat: no-repeat;
-    background-size: auto;
-    margin-right: -4%;
-    margin-top: -33%;
-}
-
-#cogText4 {
-    margin-left: 27%;
-    margin-top: -22%;
-}
-
-#cogText4 p {
-    overflow: hidden;
-    width: 200px;
-    height: 200px;
+#cogwheel1 #line1 {
+    width: 100%;
+    height: 100%;
     margin-top: -30%;
-    overflow-y: hidden;
 }
 
-#cogText4 h4 {
-    width: 200px;
-    height: 200px;
+#cogwheel2 {
+    margin-left: 28.5%;
+    z-index: 501;
+}
+
+#cogwheel2 h4 {
+    color: #7d7d7d;
+}
+
+#cogwheel2 #cogText2 {
+    margin-left: -20%;
+    margin-top: -22%;
+    height: 50%;
+    width: 20%;
+    text-align: end;
+}
+
+#cogwheel2 #line2 {
+    width: 100%;
+    height: 100%;
+    margin-top: -30%;
+}
+
+#cogwheel3 {
+    margin-left: 47%;
+    margin-top: -1%;
+    z-index: 502;
+}
+
+#cogwheel3 h4 {
+    color: #41b3dd;
+}
+
+#cogwheel3 #cogText3 {
+    margin-left: 36%;
+    margin-top: -37%;
+    height: 50%;
+    width: 20%;
+    text-align: end;
+}
+
+#cogwheel3 #line3 {
+    width: 100%;
+    height: 100%;
+    margin-top: -30%;
+}
+
+#cogwheel4 {
+    margin-left: 28%;
+    z-index: 503;
+}
+
+#cogwheel4 h4 {
     color: #f71d79;
 }
 
-/*    start 5*/
-
-.line5 {
-    background: url("../images/line5.png");
-    background-repeat: no-repeat;
-    background-size: auto;
-    margin-left: -25%;
-    margin-top: -33%;
-}
-
-#cogText5 {
-    margin-left: 61%;
-    margin-top: -18%;
-}
-
-#cogText5 p {
-    overflow: hidden;
-    width: 200px;
-    height: 200px;
+#cogwheel4 #cogText4 {
+    margin-left: -20%;
     margin-top: -30%;
-    overflow-y: hidden;
+    height: 50%;
+    width: 20%;
+    text-align: end;
 }
 
-#cogText5 h4 {
-    width: 200px;
-    height: 200px;
+#cogwheel4 #line4 {
+    width: 100%;
+    height: 100%;
+    margin-top: -30%;
+}
+
+#cogwheel5 {
+    margin-left: 38.5%;
+    margin-top: 10%;
+    z-index: 505;
+}
+
+#cogwheel5 h4 {
     color: #f78f1d;
-    ;
-    text-align: start;
 }
 
-@media all and (max-width: 970px) {
-    #cogText1 {
-        margin-left: 70%;
-        margin-top: -109%;
+#cogwheel5 #cogText5 {
+    margin-left: 30%;
+    margin-top: -32%;
+    height: 50%;
+    width: 20%;
+    text-align: end;
+}
+
+#cogwheel5 #line5 {
+    width: 100%;
+    height: 100%;
+    margin-top: -30%;
+}
+
+/* Spin Whells Css */
+
+.spinRigth {
+    -webkit-animation: rotation 50s infinite linear;
+}
+
+.spinLeft {
+    -webkit-animation: rotation 50s infinite linear;
+    animation-direction: reverse;
+}
+
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(50deg);
     }
-    #cogText2 {
-        margin-left: -0.5%;
-        margin-top: -60%;
-    }
-    #cogText3 {
-        margin-left: 71%;
-        margin-top: -52%;
-    }
-    #cogText4 {
-        margin-left: 0.5%;
-        margin-top: -52.5%;
-    }
-    #cogText5 {
-        margin-left: 63.5%;
-        margin-top: -30%;
+    to {
+        -webkit-transform: rotate(359deg);
     }
 }
+
+/* Projects CSS */
 
 .showProjects {
     background-color: rgb(255, 255, 255);
     grid-column: 1/9;
-    grid-row: 27/37;
+    grid-row: 25/35;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-auto-rows: minmax(100px, auto);
@@ -645,11 +424,18 @@
     text-align: center;
 }
 
-.showProjects img {
+.ProjectImages {
+    display: flex;
+    flex-wrap: wrap;
     grid-column: 1/9;
     grid-row: 3/7;
-    max-width: 100%;
+    justify-content: center;
     height: auto;
+}
+
+.ProjectImages img {
+    height: 50%;
+    width: 25%;
 }
 
 .more {
@@ -658,8 +444,7 @@
     grid-column: 4/6;
     grid-row: 7;
     text-align: center;
-    margin-top: -5%;
-    color: rgb(195, 195, 195);
+    color: #c3c3c3;
 }
 
 @media all and (max-width: 900px) {
@@ -683,7 +468,7 @@
 .clientList {
     background-color: #ffffff;
     grid-column: 1/9;
-    grid-row: 37/47;
+    grid-row: 35/46;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-auto-rows: minmax(100px, auto);
@@ -706,7 +491,7 @@
     background-color: #ffffff;
     overflow-y: hidden;
     display: flex;
-    margin-top: -12%
+    margin-top: -12%;
 }
 
 @media all and (max-width: 900px) {
@@ -749,10 +534,10 @@
 
 .clientName p {
     width: 95%;
-    height: 200px;
-    margin: 10px;
+    height: 87%;
+    margin: 3%;
     text-align: justify;
-    font-family: 'Arimo', sans-serif;
+    font-family: "Arimo", sans-serif;
     background-color: transparent;
 }
 
@@ -776,7 +561,7 @@
     grid-row: 3;
     grid-column: 1/9;
     text-align: center;
-    height: 50px;
+    height: 10%;
     background-color: #ffffff;
     color: rgb(195, 195, 195);
     margin-top: -10%;
@@ -787,7 +572,7 @@
 .contact {
     background-color: rgb(255, 255, 255);
     grid-column: 1/9;
-    grid-row: 44/53;
+    grid-row: 43/53;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-auto-rows: minmax(100px, auto);
@@ -840,7 +625,7 @@
     width: 300px;
     margin: 10px;
     text-align: justify;
-    font-family: 'Arimo', sans-serif;
+    font-family: "Arimo", sans-serif;
     overflow-y: hidden;
     letter-spacing: 0.5px;
     border: none !important;
@@ -856,18 +641,16 @@
     background-color: rgb(247, 143, 29) !important;
     color: #ffffff;
     font-weight: bold;
-    height: 60px;
-    width: 300px;
+    height: 6%;
+    width: 29%;
     margin: 10px;
     text-align: justify;
-    font-family: 'Arimo', sans-serif;
+    font-family: "Arimo", sans-serif;
     overflow-y: hidden;
     font-size: 25px;
     letter-spacing: 0.5px;
-    padding-top: 1.5%;
+    padding-top: 2%;
     padding-right: 10%;
-    outline: none;
-    border: none;
 }
 
 #submitForm:hover {
@@ -943,7 +726,6 @@
 }
 
 .newsletterForm a {
-    height: 100px;
     width: 150px;
     height: 60px;
     width: 300px;
@@ -982,8 +764,6 @@
 .newsletterForm input {
     background-color: rgb(247, 143, 29);
     color: #ffffff;
-    height: 100px;
-    width: 150px;
     height: 60px;
     width: 300px;
     margin: 10px;
@@ -1000,16 +780,15 @@
 .footer {
     background-color: #8a8a8a;
     grid-column: 1/9;
-    grid-row: 52/52;
-    overflow-y: hidden;
+    grid-row: 52/54;
+    overflow: hidden;
     transform: rotate(2deg);
     width: 110%;
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-auto-rows: minmax(100px, auto);
+    display: flex;
+    bottom: 0;
     position: relative;
     right: 3%;
-    height: 300px;
+    height: 130%;
 }
 
 @media all and (max-width: 900px) {
@@ -1029,9 +808,8 @@
     margin-top: 5%;
     display: flex;
     justify-content: center;
-    width: 100%;
-    height: 300px;
-    grid-column: 1/9;
+    width: 90%;
+    height: 110%;
 }
 
 .subjects {
@@ -1040,7 +818,9 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    width: 210px;
+    width: 33%;
+    height: 100%;
+    align-items: center;
 }
 
 .subjects h5 {
@@ -1056,16 +836,15 @@
 
 .subjects ul {
     background-color: transparent;
-    width: 200px;
-    height: 100%;
+    width: 80%;
+    height: 110%;
     text-align: end;
     overflow: hidden;
-    margin-top: -5%;
 }
 
 .subjects ul li {
     background-color: transparent;
-    height: 27px;
+    height: 10%;
     letter-spacing: 0.5px;
 }
 
